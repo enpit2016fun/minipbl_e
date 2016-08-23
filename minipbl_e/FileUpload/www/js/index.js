@@ -48,6 +48,4 @@ var app = {
     }
 };
 
-
-
 app.initialize();
