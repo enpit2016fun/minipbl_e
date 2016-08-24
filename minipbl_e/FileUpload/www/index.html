@@ -83,7 +83,8 @@
                </script>
     </head>
     <body>
-        <div class="app">
+    <form action="upload.php" method="post" enctype="multipart/form-data">
+            <div class="app">
             <h1>Apache Cordova</h1>
             <div id="deviceready" class="blink">
                 <p class="event listening">Connecting to Device</p>
@@ -93,13 +94,11 @@
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
         <form id="my_form">
-    <input type="file" name="file_1">
-    <button type="button" onclick="file_upload()">アップロード</button>
-<<<<<<< HEAD
+    <input type="file" name="upfile" size="30" />
+    <input type="submit" value="Upload" />
     <div id= "droppable" style= "border: gray solid 1em; padding: 2em;">
-        ファイルをドロップしてください。
+        Prease drop a file
     </div>
-=======
->>>>>>> c329545cfe74561a9fcc692b173b7200511c29bb
+
 </form>    </body>
 </html>
