@@ -1,3 +1,26 @@
+<?php
+require_once('common.php');
+
+header("Content-Type: text/html; charset=utf-8");
+
+	try{
+		$pdo = connectPDO();
+		$stmt = $pdo->query("select * from event");
+        $count = 0;
+        //$_SESSION['uidlist'] = array();
+		while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
+
+			echo  . $row['event_name'] . ;
+			echo  . $row['event_date'] . ;
+			echo  . $row['event_img'] . ;
+			echo  . $row['event_txt'] . ;
+			$count++;
+
+	}catch (PDOException $e){
+		echo "ERROR" . $e->getMessage();
+	}
+}
+?>
 <!DOCTYPE html>
 <html lang = "ja">
     
