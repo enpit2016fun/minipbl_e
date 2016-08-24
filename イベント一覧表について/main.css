@@ -1,9 +1,14 @@
+header{
+    padding: 20px;
+    background-color: chartreuse;
+    color:crimson;
+}
 body{
     width:100%;
-    margin:auto;
     padding: 0;
     font-family:Arial, sans-serif;
     line-height: 18px;
+    margin:auto;
     background-color:aliceblue;
 }
 ul{
@@ -18,14 +23,12 @@ div{
     margin-left: auto;
 }
 
-header{
-    padding: 20px;
-    background-color: chartreuse;
-    color:darkblue;
-}
 
-span{
-    color:aqua;
+
+span{/*
+    width:100%;
+    margin-left:100px;
+    */
 }
 
 h1{
@@ -35,8 +38,8 @@ h1{
 }
 
 img{
-    float: left;
-    margin-left: 100px;
+   /*float: left;*/
+   /* margin-left: 100px;*/
 }
 
 a{
