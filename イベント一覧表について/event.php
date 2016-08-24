@@ -92,11 +92,13 @@ $pdo = connectPDO();
         echo "</p>";
         echo "</strong>";
         //画像
-        //    forest.jpg
-        //echo "<img src= \"./images/".$e_img[0][2]." alt=\"森林イメージ\">";
-        //echo "image_name:" . $e_img[2];
-        echo "<img src= \"./images/".$event_info[2][$i]."\" alt=\"森林イメージ\">";
+        //test用   forest.jpg
         //echo "<img src= \"./images/forest.jpg\" alt=\"森林イメージ\">";
+        
+        //echo "image_name:" . $event_info[2][$i];
+        echo "<img src= \"".$event_info[2][$i]."\" alt=\"森林イメージ\">";
+        //echo "<img src= \"./images/".$event_info[2][$i]."\" alt=\"森林イメージ\">";
+        
         //詳細
         echo "<p>";
         echo    $event_info[3][$i];
