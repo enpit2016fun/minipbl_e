@@ -129,6 +129,7 @@ function displayCheck($ini,$i){
 		$value = $_SESSION['arr'][$i];
 	}
 
+
 	$str = "<input name=\"issend\" type=\"hidden\" value=\"0\" />";
 	$str = $str . "<input name=\"issend\" type=\"checkbox\" value=\"1\"";
 	if($i == 5){

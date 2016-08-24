@@ -10,6 +10,7 @@ if(isset($_POST["new"]) || isset($_POST["change"])) header("Location:add.php");
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
 <title>つくしの子幼稚園名簿登録</title>
 <link rel="STYLESHEET" href="all.css" type="text/css">
 </head>
@@ -19,6 +20,7 @@ if(isset($_POST["new"]) || isset($_POST["change"])) header("Location:add.php");
 			<form action='Login.php' method='POST'>
 				<input type="submit" name="new" id = "new" value="新しく登録する" style="margin: 10px; float: right;" />
 				<input type="submit" name="change" id="change" value = "登録内容を変更する" style="margin: 10px; float:right;" />
+
 			</form>
 		</div>
 	</div>

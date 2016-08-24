@@ -35,6 +35,7 @@ if(isset($_POST["add"])){
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<<<<<<< HEAD
 <title>イベント管理システム-新規登録-</title>
 <link rel="STYLESHEET" href="add.css" type="text/css">
 </head>
@@ -42,6 +43,7 @@ if(isset($_POST["add"])){
 	<div id="site-box">
 		<div id="head">
 			<h2>新規登録</h2>
+
 		</div>
 		<!-- #head -->
 		<div id="main">
