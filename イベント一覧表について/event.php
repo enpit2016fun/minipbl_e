@@ -1,25 +1,30 @@
 <?php
 require_once('common.php');
-
-header("Content-Type: text/html; charset=utf-8");
+$pdo = connectPDO();
 
 	try{
 		$pdo = connectPDO();
 		$stmt = $pdo->query("select * from event");
-        $count = 0;
-        //$_SESSION['uidlist'] = array();
+        $e_name = array();
+        $e_date = array();
+        $e_img = array();
+        $e_text = array();
+        $e_number = array();
+        $i = 0;
+    
+
 		while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
-
-			echo  . $row['event_name'] . ;
-			echo  . $row['event_date'] . ;
-			echo  . $row['event_img'] . ;
-			echo  . $row['event_txt'] . ;
-			$count++;
-
+		    $e_name[$i]   = $row['event_name'];
+			$e_date[$i]   = $row['event_date'];
+			$e_img[$i]    = $row['event_img'];
+			$e_text[$i]   = $row['event_text'];
+            $e_number[$i] = $row['event_number'];
+            $i++;
+        }
+        $event_info = array($e_name,$e_date,$e_img,$e_text,$e_number);
 	}catch (PDOException $e){
 		echo "ERROR" . $e->getMessage();
 	}
-}
 ?>
 <!DOCTYPE html>
 <html lang = "ja">
@@ -39,16 +44,24 @@ header("Content-Type: text/html; charset=utf-8");
         </header>
         <div>
         <h2>
-            <ul>
-                <li><a href = '#undoukai'>運動会</a></li><br>
-                <li><a href = '#baza'>バザー</a></li><br>
-                <li><a href = '#fever'>お祭り</a></li><br>
-                <li><a href = '#brossom'>花見</a></li><br>
-                <li><a href = '#graduation'>卒園式</a></li><br>
-            </ul>
-        </h2>
-        <h3 id = "undoukai">運動会</h3>
-        <strong><h4>イベント名前</h4></strong>
+            <?php
+            echo "<ul>";
+            echo    "<li><a href = '#" .$event_info[0][4]. "'>".$event_info[0][0]."</a></li><br>";
+            echo    "<li><a href = '#baza'>バザー</a></li><br>";
+            echo    "<li><a href = '#fever'>お祭り</a></li><br>";
+            echo    "<li><a href = '#brossom'>花見</a></li><br>";
+            echo    "<li><a href = '#graduation'>入園式・卒園式</a></li><br>";
+            echo    "<li><a href = '#other'>その他</a></li><br>";
+            echo "</ul>";
+    
+        echo "</h2>";
+        echo "<h3 id = \"" .$event_info[0][4]."\">運動会</h3>";
+            ?>
+            
+        <strong><h4><?php
+           // echo $event_info[0][0];
+            ?>
+            </h4></strong>
         <strong>
         <p>
             日時
@@ -145,7 +158,32 @@ header("Content-Type: text/html; charset=utf-8");
             <br>
         </p>
         <a href = '#event_top'>イベントトップへ</a>    
-        <h3 id = "graduation">卒業式</h3>
+        <h3 id = "graduation">入園式・卒園式</h3>
+        <strong><h4>イベント名前</h4></strong>
+        <strong>
+        <p>
+            日時
+        </p>
+        <img src="images/forest.jpg" alt="森林イメージ">
+        </strong>
+        <p>
+            詳細
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+        </p>
+            <a href = '#event_top'>イベントトップへ</a>
+            
+        <h3 id = "other">その他</h3>
         <strong><h4>イベント名前</h4></strong>
         <strong>
         <p>
@@ -172,3 +210,7 @@ header("Content-Type: text/html; charset=utf-8");
         </div>
     </body>
 </html>
+
+<?php
+$pdo = null;
+?>
