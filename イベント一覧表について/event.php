@@ -62,7 +62,7 @@ $pdo = connectPDO();
     <!--イベントリスト見出し-->
         <div>
         <?php        
-            for ($i = 0; $i <count($e_name); $i++){
+            for ($i = count($e_name)-1; $i > -1; $i--){
             echo "<h2>";
             echo "<ul>";
             echo "<li><a href = '#" .$event_info[4][$i]. "'>".$event_info[0][$i]."</a></li><br>";
@@ -74,7 +74,7 @@ $pdo = connectPDO();
             
         <!--イベントリスト本文-->    
         <?php
-        for ($i = 0; $i <count($e_name); $i++){
+        for ($i = count($e_name)-1; $i > -1; $i--){
         //イベント名
         echo "<strong><h3 id = \"" .$event_info[4][$i]."\">".$event_info[0][$i]."</h3></strong>";
             
