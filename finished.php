@@ -11,15 +11,12 @@
 			<h2>登録が完了しました！</h2>
             <h2>○○幼稚園からのイベント情報をお楽しみに☆</h2>
 		</div>
-        <!--
+        
 		<div id=main>
-			<form action='confirm.php' method='POST'>
-				<input type="submit" name="login" value="完了" style="margin: 10px; float: right;" />
+			<form action='event.php' method='POST'>
+				<input type="submit" name="backlist" value="イベント一覧へ" style="margin: 10px; float: right;" />
 			</form>
-            <form action='add.php' method='POST'>
-				<input type="submit" name="login" value="修正" style="margin: 10px; float: right;" />
-			</form>
-		</div> -->
+		</div>
 	</div>
 </body>
 </html>
