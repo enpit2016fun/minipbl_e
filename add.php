@@ -35,7 +35,6 @@ if(isset($_POST["add"])){
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<<<<<<< HEAD
 <title>イベント管理システム-新規登録-</title>
 <link rel="STYLESHEET" href="add.css" type="text/css">
 </head>
@@ -43,36 +42,39 @@ if(isset($_POST["add"])){
 	<div id="site-box">
 		<div id="head">
 			<h2>新規登録</h2>
-
 		</div>
 		<!-- #head -->
-		<div id="main">
-			<br />
-			<form action='add.php' method='POST'>
-				<table cellpadding="15">
-					<tr>
-						<th>親御さん氏名</th>
-						<th><input type="text" name="p_name" id="p_name" size=60
-							value="<?php echo $_SESSION['arr'][2];?>" onkeyup="visible();"
-							onchange="visible();" /></th>
-					</tr>
-					<tr>
-						<th>お子様氏名</th>
-						<th><input type="text" name="c_name" id="c_name" size=60
-							value="<?php echo $_SESSION['arr'][3];?>" onkeyup="visible();"
-							onchange="visible();" /></th>
-					</tr>
-                    <tr>
-						<th>メールアドレス</th>
-						<th><input type="text" name="email" id="email" size=60
-							value="<?php echo $_SESSION['arr'][0];?>" onkeyup="visible();"
-							onchange="visible();" /></th>
-					</tr>
-					<tr>
-						<th>卒業年度</th>
+<div id="form-main">
+<div id="form-div">
+
+<form action='add.php' method='POST'>
+<p class="p_name">
+<input type="text" name="p_name" id="p_name"
+class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" placeholder="親御さんのお名前"
+id="p_name"　size=20
+value="<?php echo $_SESSION['arr'][0];?>" onkeyup="visible();"
+onchange="visible();" />
+</p>
+
+<p class="c_name">
+<input type="text" name="c_name" id="c_name"
+class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" placeholder="お子さんの名前"
+id="c_name"　size=20
+value="<?php echo $_SESSION['arr'][0];?>" onkeyup="visible();"
+onchange="visible();" />
+</p>
+<p class="email">
+<input type="text" name="email" id="email"
+class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" placeholder="メールアドレス"
+id="email"　size=20
+value="<?php echo $_SESSION['arr'][0];?>" onkeyup="visible();"
+onchange="visible();" />
+</p>
+
 						<th align="left">
                         <select name = "graduation_year"  onchange = "visibleByselect();">
-                        <option value = "2016" selected>2016年度</option>
+                        <option value = "" selected>卒業年度</option>
+                        <option value = "2016">2016年度</option>
                         <option value = "2015">2015年度</option>
                         <option value = "2014">2014年度</option>
                         <option value = "2013">2013年度</option>
@@ -85,23 +87,27 @@ if(isset($_POST["add"])){
                         </select>
 						</th>
 					</tr>
-					<tr>
-						<th>配信希望</th>
-						<th align="left">
-                        <input name="issend" type="hidden" value="0" />
-                        <input name="issend" type="checkbox" value="1"　onchange = "visibleByselect()"; checked/>
-                        </th>
-					</tr>
-				</table>
-				<div id = "foot">
-					<input type="submit" name="add" id="add" value="追加する" style=" margin: 10px;" disabled />
-					<input type="reset" value ="リセット" style=" margin: 10px;" />
-					<input type="button" value="戻る" onclick="tolistback()" style=" margin: 10px;">
-			</div>
-			</form>
 
+                        <th align="left">
+                        <select name = "email_per"  onchange = "visibleByselect();">
+                        <option value = "" selected>配信希望</option>
+                        <option value = "1">許可</option>
+                        <option value = "0">不可</option>
 
-	</div>
+                    </select>
+                    </th>
+<font face="Hiragino Maru Gothic ProN">
+</font>
+<div id = "foot">
+<input type="submit" name="add" id="add" value="追加する" style=" margin: 10px;" disabled />
+<input type="reset" value ="リセット" style=" margin: 10px;" />
+<input type="button" value="戻る" onclick="tolistback()" style=" margin: 10px;">
+</div>
+</form>
+
+</div>
+</div>
+</div>
 	<!-- #main -->
 	</div>
 	<script>
