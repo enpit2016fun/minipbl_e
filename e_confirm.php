@@ -7,7 +7,7 @@ session_start();
 				$e_img = $_SESSION['e_arr'][2];
 				$e_text = $_SESSION['e_arr'][3];
 				$e_number = $_SESSION['e_arr'][4];
-             if(!empty($_SESSION['tmp_file'])) echo "ok";
+             if(!empty($_SESSION['tmp_file']))
 		if(isset($_POST["confirm"])){
 			try{
                  $query = "INSERT INTO `event` (`event_name`, `event_date`, `event_img`, `event_text`, `event_number`)" . "VALUES (:e_name, :e_date, :e_img, :e_text, :e_number);";

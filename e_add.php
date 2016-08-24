@@ -5,36 +5,51 @@ session_start();
 
 //追加ボタンが押されていれば
 if(isset($_POST["add"])){
+    echo "add";
         
     //初期化直後ならば
     if(!empty($_SESSION["USERID"])){
 			//入力があれば開始
 			if (!empty($_POST['e_name']) && !empty($_POST['e_date']) && !empty($_POST['e_text'])){
                 
+                //ファイルのアップロード＆パスの取得
                 $updir = "./files";
-$tmp_file = @$_FILES['upfile']['tmp_name'];
+                $tmp_file = @$_FILES['upfile']['tmp_name'];
                 $_SESSION['tmp_file'] = $tmp_file; 
-@list($file_name,$file_type) = explode(".",@$_FILES['upfile']['name']);
-$copy_file = date("Ymd-His") . "." . $file_type;
-                echo "ok";
-if (is_uploaded_file($_FILES["upfile"]["tmp_name"])) {
-	if (move_uploaded_file($tmp_file,"$updir/$copy_file")) {
-		chmod("upload_files/" . $_FILES["upfile"]["name"], 0644);
-        $e_img = $updir."/" . $copy_file;
-		echo $_FILES["upfile"]["name"] . "をアップロードしました。<br />";
-		echo "（※アップロードしたファイルは <a href=\"" . $updir . "/" . $copy_file . "\" target=\"_blank\">こちら</a> から確認できます。）";
-	} else {
-		echo "ファイルをアップロード出来ませんでした。";
-        $e_img = 'null';
-	}
-} else {
-	echo "ファイルが選択されていません。";
-    $e_img = 'null';
-}
+                @list($file_name,$file_type) = explode(".",@$_FILES['upfile']['name']);
+                $copy_file = date("Ymd-His") . "." . $file_type;
+                if (is_uploaded_file($_FILES["upfile"]["tmp_name"])){
+              if (move_uploaded_file($tmp_file,"$updir/$copy_file")) {
+                  chmod("upload_files/" . $_FILES["upfile"]["name"], 0644);
+                  $e_img = $updir."/" . $copy_file;
+              } else {
+                  $e_img = 'null';
+              }
+          } else {
+              $e_img = 'null';
+          }
+                echo "lets enjoy";
+                try{
+                $pdo = connectPDO();
+            //$result = mysql_query("select count(*) from mytable", $link);
+            // $row = mysql_fetch_array($result, MYSQL_ASSOC);
+               // $stmt = $pdo->query("SELECT COUNT(*) FROM event");
+		        //$row = $stmt->fetch(PDO::FETCH_ASSOC);
+                //$dbh->setAttribute(PDO::MYSQL_ATTR_USE_BUFFERED_QUERY, true); 
+                $sql = 'SELECT * FROM event ';
+                $stmt = $pdo->query($sql);
+                $stmt->execute();
+                $count=$stmt->rowCount();
+			echo "count:" . $count;
+			}catch(PDOException $e){
+				echo "ERROR:" . $e->getMessage();
+			}
+                
+                
 				$e_name = htmlspecialchars($_POST['e_name']);
 				$e_date = htmlspecialchars($_POST['e_date']);
                 $e_text = htmlspecialchars($_POST['e_text']);
-				$e_number = 1;
+				$e_number = $count+1;
 				$infoarr = array($e_name,$e_date,$e_img,$e_text,$e_number);
 				$_SESSION['e_arr'] = $infoarr;
 				$pdo = null;
