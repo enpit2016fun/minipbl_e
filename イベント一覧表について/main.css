@@ -37,13 +37,9 @@ h1{
 　　 font-size: 30px;
 }
 
-img{
-   /*float: left;*/
-   /* margin-left: 100px;*/
-}
 
 a{
-    font-size: 150%;
+    font-size: 100%;
     font-weight: bold;
     color:coral;
     text-decoration:underline;

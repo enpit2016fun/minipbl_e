@@ -62,7 +62,7 @@ $pdo = connectPDO();
     <!--イベントリスト見出し-->
         <div id = "main">
         <?php        
-            echo "<h2>";
+            echo "<h1>";
             echo "<ul>";
             
             for ($i = count($e_name)-1; $i > -1; $i--){
@@ -75,7 +75,7 @@ $pdo = connectPDO();
             echo "<br>";
             }
             echo "</ul>";
-            echo "</h2>";
+            echo "</h1>";
             ?>
             
             
@@ -83,24 +83,27 @@ $pdo = connectPDO();
         <?php
         for ($i = count($e_name)-1; $i > -1; $i--){
         //イベント名
-        echo "<strong><h3 id = \"" .$event_info[4][$i]."\">".$event_info[0][$i]."</h3></strong>";
+        echo "<strong><h2 id = \"" .$event_info[4][$i]."\">".$event_info[0][$i]."</h2></strong>";
             
         //日時    
         echo "<strong>";
-        echo "<p>";
+        echo "<h2>";
         echo    $event_info[1][$i];
-        echo "</p>";
+        echo "</h2>";
         echo "</strong>";
         //画像
         //test用   forest.jpg
         //echo "<img src= \"./images/forest.jpg\" alt=\"森林イメージ\">";
         
         //echo "image_name:" . $event_info[2][$i];
-        echo "<img src= \"".$event_info[2][$i]."\" alt=\"森林イメージ\">";
+        echo "<img src= \"".$event_info[2][$i]."\" width = \"600\" height = \"800\" alt=\"森林イメージ\">";
         //echo "<img src= \"./images/".$event_info[2][$i]."\" alt=\"森林イメージ\">";
-        
+        echo "<br clear=\"right\">";
+            
+        echo "<a href = '#event_top'>イベントトップへ</a>";    
+            
         //詳細
-        echo "<p>";
+        echo "<h3>";
         echo    $event_info[3][$i];
         echo        "<br>";
         echo        "<br>";
@@ -119,9 +122,9 @@ $pdo = connectPDO();
         echo        "<br>";
         echo        "<br>";
         echo        "<br>";    
-        echo "</p>";
+        echo "</h3>";
         
-        echo "<a href = '#event_top'>イベントトップへ</a>";
+        
         }
         echo "</div>";
         ?>
