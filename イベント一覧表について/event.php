@@ -60,15 +60,22 @@ $pdo = connectPDO();
     </header>
         
     <!--イベントリスト見出し-->
-        <div>
+        <div id = "main">
         <?php        
-            for ($i = count($e_name)-1; $i > -1; $i--){
             echo "<h2>";
             echo "<ul>";
-            echo "<li><a href = '#" .$event_info[4][$i]. "'>".$event_info[0][$i]."</a></li><br>";
+            
+            for ($i = count($e_name)-1; $i > -1; $i--){
+
+            echo "<li>";
+            if($i == count($e_name)-1){
+            echo "<img src= \"./images/new017_06.gif\"align=\"top\">";
+            }
+            echo "<a href = '#" .$event_info[4][$i]. "'>".$event_info[0][$i]."</a></li>";
+            echo "<br>";
+            }
             echo "</ul>";
             echo "</h2>";
-            }
             ?>
             
             
@@ -114,8 +121,8 @@ $pdo = connectPDO();
         
         echo "<a href = '#event_top'>イベントトップへ</a>";
         }
+        echo "</div>";
         ?>
-        </div>
     </body>
 </html>
 
