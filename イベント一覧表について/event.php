@@ -1,3 +1,4 @@
+<!--php 初期設定：データベースから変数へ格納する-->
 <?php
 require_once('common.php');
 $pdo = connectPDO();
@@ -25,7 +26,20 @@ $pdo = connectPDO();
 	}catch (PDOException $e){
 		echo "ERROR" . $e->getMessage();
 	}
+
+//動作確認用テスト
+//echo "event_info.size:" .count($event_info)."<br>";
+//echo "colum_info.size:" .count($e_name)."<br>";
+//for ($i = 0; $i<count($event_info); $i++){
+//for ($j = 0; $j<count($e_name); $j++){
+//    echo $event_info[$i][$j].",";
+//}
+//    echo "<br>";
+//}
+
 ?>
+
+<!--初期設定-->
 <!DOCTYPE html>
 <html lang = "ja">
     
@@ -37,176 +51,70 @@ $pdo = connectPDO();
         
         <link rel="stylesheet" href="main.css">
     </head>
-    <!--イベントリスト本文-->
-    <body>
-        <header id = "event_top">
-          <h1>イベント一覧表</h1>  
-        </header>
-        <div>
-        <h2>
-            <?php
-            echo "<ul>";
-            echo    "<li><a href = '#" .$event_info[0][4]. "'>".$event_info[0][0]."</a></li><br>";
-            echo    "<li><a href = '#baza'>バザー</a></li><br>";
-            echo    "<li><a href = '#fever'>お祭り</a></li><br>";
-            echo    "<li><a href = '#brossom'>花見</a></li><br>";
-            echo    "<li><a href = '#graduation'>入園式・卒園式</a></li><br>";
-            echo    "<li><a href = '#other'>その他</a></li><br>";
-            echo "</ul>";
     
-        echo "</h2>";
-        echo "<h3 id = \"" .$event_info[0][4]."\">運動会</h3>";
+    
+    <!--ヘッダー-->
+    <body>
+    <header id = "event_top">            
+    <h1>イベント一覧表</h1>  
+    </header>
+        
+    <!--イベントリスト見出し-->
+        <div>
+        <?php        
+            for ($i = 0; $i <count($e_name); $i++){
+            echo "<h2>";
+            echo "<ul>";
+            echo "<li><a href = '#" .$event_info[4][$i]. "'>".$event_info[0][$i]."</a></li><br>";
+            echo "</ul>";
+            echo "</h2>";
+            }
             ?>
             
-        <strong><h4><?php
-           // echo $event_info[0][0];
-            ?>
-            </h4></strong>
-        <strong>
-        <p>
-            日時
-        </p>
-        </strong>
-        <img src="images/forest.jpg" alt="森林イメージ">
-        <p>
-            詳細
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-        </p>
-        
-        <a href = '#event_top'>イベントトップへ</a>
-        <h3 id = "baza">バザー</h3>
-        <strong><h4>イベント名前</h4></strong>
-        <strong>
-        <p>
-            日時
-        </p>
-        <img src="images/forest.jpg" alt="森林イメージ">
-        </strong>
-        <p>
-            詳細
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-        </p>
-        
-        <a href = '#event_top'>イベントトップへ</a>
-        <h3 id = "fever">お祭り</h3>
-        <strong><h4>イベント名前</h4></strong>
-        <strong>
-        <p>
-            日時
-        </p>
-        <img src="images/forest.jpg" alt="森林イメージ">
-        </strong>
-        <p>
-            詳細
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-        </p>
-        <a href = '#event_top'>イベントトップへ</a>    
-        <h3 id = "brossom">花見</h3>
-        <strong><h4>イベント名前</h4></strong>
-        <strong>
-        <p>
-            日時
-        </p>
-        <img src="images/forest.jpg" alt="森林イメージ">
-        </strong>
-        <p>
-            詳細
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-        </p>
-        <a href = '#event_top'>イベントトップへ</a>    
-        <h3 id = "graduation">入園式・卒園式</h3>
-        <strong><h4>イベント名前</h4></strong>
-        <strong>
-        <p>
-            日時
-        </p>
-        <img src="images/forest.jpg" alt="森林イメージ">
-        </strong>
-        <p>
-            詳細
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-        </p>
-            <a href = '#event_top'>イベントトップへ</a>
             
-        <h3 id = "other">その他</h3>
-        <strong><h4>イベント名前</h4></strong>
-        <strong>
-        <p>
-            日時
-        </p>
-        <img src="images/forest.jpg" alt="森林イメージ">
-        </strong>
-        <p>
-            詳細
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-        </p>
-            <a href = '#event_top'>イベントトップへ</a>
+        <!--イベントリスト本文-->    
+        <?php
+        for ($i = 0; $i <count($e_name); $i++){
+        //イベント名
+        echo "<strong><h3 id = \"" .$event_info[4][$i]."\">".$event_info[0][$i]."</h3></strong>";
+            
+        //日時    
+        echo "<strong>";
+        echo "<p>";
+        echo    $event_info[1][$i];
+        echo "</p>";
+        echo "</strong>";
+        //画像
+        //    forest.jpg
+        //echo "<img src= \"./images/".$e_img[0][2]." alt=\"森林イメージ\">";
+        //echo "image_name:" . $e_img[2];
+        echo "<img src= \"./images/".$event_info[2][$i]."\" alt=\"森林イメージ\">";
+        //echo "<img src= \"./images/forest.jpg\" alt=\"森林イメージ\">";
+        //詳細
+        echo "<p>";
+        echo    $event_info[3][$i];
+        echo        "<br>";
+        echo        "<br>";
+        echo        "<br>";
+        echo        "<br>";
+        echo        "<br>";
+        echo        "<br>";
+        echo        "<br>";
+        echo        "<br>";
+        echo        "<br>";
+        echo        "<br>";
+        echo        "<br>";
+        echo        "<br>";
+        echo        "<br>";
+        echo        "<br>";
+        echo        "<br>";
+        echo        "<br>";
+        echo        "<br>";    
+        echo "</p>";
+        
+        echo "<a href = '#event_top'>イベントトップへ</a>";
+        }
+        ?>
         </div>
     </body>
 </html>
