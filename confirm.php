@@ -32,7 +32,6 @@ session_start();
 				echo "ERROR:" . $e->getMessage();
 			}
 		}
-    echo $address;
     if($issend == 1)  $issend_flag = "許可";
     else  $issend_flag = "不可";
 ?>
@@ -42,7 +41,7 @@ session_start();
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>イベント管理システム-確認-</title>
-<link rel="STYLESHEET" href="confirm.css" type="text/css">
+<link rel="STYLESHEET" href="./css/confirm.css" type="text/css">
 </head>
 <body>
 	<div id="site-box">

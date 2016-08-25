@@ -45,7 +45,7 @@ if(isset($_POST["add"])){
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="js/jquery.jpostal.js"></script>
 <title>イベント管理システム-新規登録-</title>
-<link rel="STYLESHEET" href="add.css" type="text/css">
+<link rel="STYLESHEET" href="./css/add.css" type="text/css">
 </head>
 <body>
 <form action='add.php' method='POST'>
