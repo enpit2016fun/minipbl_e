@@ -1,0 +1,113 @@
+
+@CHARSET "UTF-8";
+body{
+margin:0 auto;
+padding:0;
+font-size:15px;
+width:100%;
+font-family:メイリオ, Arial, sans-serif;
+line-height: 18px;
+background-color:#ffffff;
+color:#505050;
+}
+
+
+#site-box{
+	margin: 0px auto;
+	width:1800px;
+}
+
+header{
+    margin:0 auto;
+    padding: 20px;
+    height: 100px;
+    font-size:28px;
+    text-align:center;
+    width:800px;
+    background-color: midnightblue;
+    color:#ffffff;
+}
+
+#main{
+    margin: 0 auto;
+    padding: 20px;
+    width = 800px;
+    border: 1px solid #DDDDDD;
+    background-color:#ffffff;
+}
+
+section, article, aside, nav, header, footer, hgroup,li,ul{
+display: block;
+}
+
+h2{
+ font-size:28px;  
+ border-bottom: 1px dotted gray;
+ padding-bottom: 5px; /* 内容と線との間隔量 */
+}
+
+h3{
+ font-size:24px;
+}
+
+h4{
+ font-size:18px;   
+}
+
+ul{
+    font-weight: bold;
+    font-size:24px;
+}
+div{
+    /*color: cornflowerblue;*/
+    width: 800px;
+    /*margin-top: 20px;
+    /*margin-right: auto;
+    margin-left: auto;*/
+}
+
+.contents{
+    margin-bottom: 150px;
+    
+}
+
+p{
+    font-size: 18px;
+    
+}
+
+span{/*
+    width:100%;
+    margin-left:100px;
+    */
+}
+
+img{
+   /*float: left;*/
+   /* margin-left: 100px;*/
+}
+
+a{
+
+    font-weight: bold;
+    /*color:coral;*/
+    /*text-decoration:underline;*/
+}
+
+/*a:link{
+    color:cornflowerblue;
+    text-decoration: none;
+    font-style: normal;
+}*/
+
+a:visited{
+    color:midnightblue;
+    /*text-decoration:overline;*/
+    font-style: normal;
+}
+
+a:hover{
+    /*color:blueviolet;*/
+    text-decoration: underline;
+    font-style: italic;
+}
