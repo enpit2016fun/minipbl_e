@@ -36,23 +36,24 @@ if(isset($_POST["add"])){
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>イベント管理システム-新規登録-</title>
-<link rel="STYLESHEET" href="add.css" type="text/css">
+<link rel="STYLESHEET" href="./css/add.css" type="text/css">
 </head>
 <body>
+
 	<div id="site-box">
 		<div id="head">
-			<h2>新規登録</h2>
+			<h2 align="cenet">新規登録</h2>
 		</div>
 		<!-- #head -->
 <div id="form-main">
 <div id="form-div">
-
-<form action='add.php' method='POST'>
+<form action='add.php' method='POST' class="form" id="form1">
+<!--form class="form" id="form1"-->
 <p class="p_name">
 <input type="text" name="p_name" id="p_name"
 class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" placeholder="親御さんのお名前"
 id="p_name"　size=20
-value="<?php echo $_SESSION['arr'][0];?>" onkeyup="visible();"
+value="<?php echo $_SESSION['arr'][1];?>" onkeyup="visible();"
 onchange="visible();" />
 </p>
 
@@ -60,18 +61,18 @@ onchange="visible();" />
 <input type="text" name="c_name" id="c_name"
 class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" placeholder="お子さんの名前"
 id="c_name"　size=20
-value="<?php echo $_SESSION['arr'][0];?>" onkeyup="visible();"
+value="<?php echo $_SESSION['arr'][2];?>" onkeyup="visible();"
 onchange="visible();" />
 </p>
 <p class="email">
 <input type="text" name="email" id="email"
 class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" placeholder="メールアドレス"
 id="email"　size=20
-value="<?php echo $_SESSION['arr'][0];?>" onkeyup="visible();"
+value="<?php echo $_SESSION['arr'][3];?>" onkeyup="visible();"
 onchange="visible();" />
 </p>
-
 						<th align="left">
+
                         <select name = "graduation_year"  onchange = "visibleByselect();">
                         <option value = "" selected>卒業年度</option>
                         <option value = "2016">2016年度</option>
@@ -89,7 +90,7 @@ onchange="visible();" />
 					</tr>
 
                         <th align="left">
-                        <select name = "email_per"  onchange = "visibleByselect();">
+                        <select name = "issend"  onchange = "visibleByselect();">
                         <option value = "" selected>配信希望</option>
                         <option value = "1">許可</option>
                         <option value = "0">不可</option>
@@ -103,6 +104,8 @@ onchange="visible();" />
 <input type="reset" value ="リセット" style=" margin: 10px;" />
 <input type="button" value="戻る" onclick="tolistback()" style=" margin: 10px;">
 </div>
+
+</form>
 </form>
 
 </div>

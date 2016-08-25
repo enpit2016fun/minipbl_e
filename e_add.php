@@ -71,7 +71,7 @@ if(isset($_POST["add"])){
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>イベント管理システム-イベント登録-</title>
-<link rel="STYLESHEET" href="add.css" type="text/css">
+<link rel="STYLESHEET" href="./css/add.css" type="text/css">
          <script language="javascript">
              
              $(function() {          
@@ -130,10 +130,10 @@ if(isset($_POST["add"])){
                     <tr>
 						<th>詳細</th>
 						<th>
-                            <!--input type="text" name="e_text" id="e_text" size=60
-							value="<?php //echo $_SESSION['e_arr'][3];?>" onkeyup="visible();"
-							onchange="visible();" -->
-                            <textarea rows="10" cols="60" name ="e_name" id = "e_name">詳細を入力</textarea>
+                            <input type="text" name="e_text" id="e_text" size=60
+							value="<?php echo $_SESSION['e_arr'][3];?>" onkeyup="visible();"
+							onchange="visible();" \>
+                            <!--textarea rows="10" cols="60" name ="e_name" id = "e_name">詳細を入力</textarea-->
                         </th>
 					</tr>
 				</table>

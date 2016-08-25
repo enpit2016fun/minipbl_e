@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>イベント管理システム-登録完了！-</title>
-<link rel="STYLESHEET" href="login.css" type="text/css">
+<link rel="STYLESHEET" href="./css/add.css" type="text/css">
 </head>
 <body>
 	<div id=site-box>
