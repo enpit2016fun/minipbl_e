@@ -20,7 +20,7 @@ session_start();
 					$stmt -> bindValue(':e_text', $e_text, PDO::PARAM_INT);
 					$stmt -> bindValue(':e_number', $e_number, PDO::PARAM_INT);
 					$stmt -> execute();
-					header("Location:finished.php");
+					header("Location:e_finished.php");
 			}catch(PDOException $e){
 				echo "ERROR:" . $e->getMessage();
 			}
@@ -32,26 +32,52 @@ session_start();
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>イベント管理システム-確認-</title>
-<link rel="STYLESHEET" href="list.css" type="text/css">
+<link rel="STYLESHEET" href="confirm.css" type="text/css">
 </head>
 <body>
 	<div id=site-box>
-		<div id=head>
-			<h2>登録内容を確認してください☆</h2>
-		</div>
+
+<div id="cform-main">
+<div id="cform-div">
+<form class="cform" id="cform">
+
+<div class="sub">
+
+<h2 align="center">登録内容を確認してください⭐︎</h2>
+</div>
+<p class="e_name">
+<input type="text" name="e_name" id="e_name"
+class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" placeholder=$p_name
+id="e_name"　size=20
+value="<?php echo $e_name;?>" onkeyup="visible();"
+onchange="visible();" readonly/>
+</p>
+
+<p class="e_date">
+<input type="text" name="e_date" id="e_date"
+class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" placeholder="お子さんの名前"
+id="e_date"　size=20
+value="<?php echo $e_date;?>" onkeyup="visible();"
+onchange="visible();" readonly/>
+</p>
+
+<p class="e_text">
+<input type="text" name="e_text" id="e_text"
+class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" placeholder="メールアドレス"
+id="e_text"　size=20
+value="<?php echo $e_text;?>" onkeyup="visible();"
+onchange="visible();" readonly/>
+</p>
+</form>
+</form>
 		<div id=main>
-           <?php 
-             echo "<table>"; 
-             echo "<tr><th>イベントタイトル</th><th>".$e_name."</th></tr>";
-             echo "<tr><th>開催日時</th><th>".$e_date."</th></tr>"; 
-             echo "<tr><th>イベント詳細</th><th>".$e_text."</th></tr>"; 
-             echo "</table>";
-            ?>
+
+
 			<form action='e_confirm.php' method='POST'>
-				<input type="submit" name="confirm" id="confirm" value="完了" style="margin: 10px; float: right;" />
+				<input type="submit" name="confirm" id="confirm" value="完了"  />
 			</form>
             <form action='e_add.php' method='POST'>
-				<input type="submit" name="revise" id="revise" value="修正" style="margin: 10px; float: right;" />
+				<input type="submit" name="revise" id="revise" value="修正"  />
 			</form>
 		</div>
 	</div>

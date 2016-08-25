@@ -111,46 +111,58 @@ if(isset($_POST["add"])){
 <body>
 	<div id="site-box">
 		<div id="head">
-			<h2>イベント登録</h2>
+	
 
 		</div>
 		<!-- #head -->
 		<div id="main">
 			<br />
-			<form action='e_add.php' method='POST' enctype="multipart/form-data">
-				<table cellpadding="15">
-					<tr>
-						<th>イベントタイトル</th>
-						<th><input type="text" name="e_name" id="e_name" size=60
-							value="<?php echo $_SESSION['e_arr'][0];?>" onkeyup="visible();"
-							onchange="visible();" /></th>
-					</tr>
-					<tr>
-						<th>開催日時</th>
-						<th>
-                        <input type="text" id="datepicker" name="e_date"></th>
-					</tr>
-                    <tr>
-						<th>詳細</th>
-						<th>
-                            <!--input type="text" name="e_text" id="e_text" size=60
-							value="<?php //echo $_SESSION['e_arr'][3];?>" onkeyup="visible();"
-							onchange="visible();" \-->
-                            <textarea rows="10" cols="60" name ="e_text" id = "e_text">詳細を入力</textarea>
-                        </th>
-					</tr>
-				</table>
+			
+               <div id="form-main">
+               <div id="form-div">
+               <form class="form" id="form" form action='e_add.php' method='POST' enctype="multipart/form-data">
+               
+               <div class="su">
+               
+               <h2 align="center">イベント登録</h2>
+               </div>
+               
+               <p class="e_name">
+               <input type="text" name="e_name" id="e_name"
+               class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" placeholder="イベント名"
+               id="e_name"　size=20
+               value="<?php echo $_SESSION['arr'][0];?>" onkeyup="visible();"
+               onchange="visible();" />
+               </p>
+               
+               <p class="datepicker">
+               <input type="text" name="e_date" id="datepicker"
+               class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" placeholder="開催日時"
+               id="datepicker"　size=20
+                onkeyup="visible();"
+               onchange="visible();" />
+               </p>
+               
+               <p class="e_text">
+               <input type="text" name="e_text" id="e_text"
+               class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" placeholder="詳細"
+               id="e_text"　size=20
+               
+               value="<?php echo $_SESSION['arr'][3];?>" onkeyup="visible();"
+               onchange="visible();" />
+               </p>
+
                         <!--form id="my_form"-->
     <input type="file" name="upfile" size="30" />
     <!--input type="submit" value="Upload" />
 </form--> 
 				<div id = "foot">
                     <!--入力なしだったら押せなくする機能どっかにいったかなしい-->
-					<input type="submit" name="add" id="add" value="追加する" style=" margin: 10px;" />
-					<input type="reset" value ="リセット" style=" margin: 10px;" />
-					<input type="button" value="戻る" onclick="tolistback()" style=" margin: 10px;">
+					<input type="submit" name="add" id="add" value="追加する" style=" margin: 8px;"/>
+					<input type="reset" value ="リセット"  style=" margin: 8px;"/>
+					<input type="button" value="戻る" onclick="tolistback()" style=" margin: 8px;"/>
+               </form>
 			</div>
-			</form>
 
 
 	</div>
