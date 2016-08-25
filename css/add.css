@@ -9,13 +9,11 @@ html{background:url(wallyellow.gif);
 #feedback-page{
     text-align:center;
 }
-
-#head{
-    text-align:center;
-    font-family:"Hiragino Maru Gothic ProN";
-    font-size:50px;
-    
+@font-face{
+font-family: 'Mamelon';
+src: url("mamelon/Mamelon.otf");
 }
+
 
 #form-main{
     width:100%;
@@ -70,34 +68,67 @@ html{background:url(wallyellow.gif);
     color:#30aed6;
     border:#30aed6 solid 3px;
 }
+.sub{
+    position:absolute;
+    color:#fff;
+    font-size:20px;
+    margin: 0 auto;
+    top:2%;
+    left:39%;
+    font-family: 'Mamelon';
+    display: inline-block;
+    
+}
+.title{
+    position:absolute;
+    background:#f4b3c2;
+    color:#a25768;
+    font-size:20px;
+    margin: 0 auto;
+    top:2%;
+    left:39%;
+    border:2px dashed #e8ecef;
+    border-radius: 5px;
+    box-shadow: 0 0 3px 3px #f4b3c2;
+    font-family: 'Mamelon';
+    display: inline-block;
+    
+   
+    
+}
 input[type="submit"] {
+    font-size:13px;
+    float:left;
     position: relative;
     display: inline-block;
-    padding: .8em 4em;
+    padding: .5em 3em;
     background:transparent;
     background-color:#85ffd0;
     border-style: none;
     border-radius: 4px;
     color: #fff;
-    font-family:'Lucida Grande','Hiragino Kaku Gothic ProN','Meiryo', sans-serif;
+    font-family: 'Mamelon';
     text-decoration: none;
     text-align: center;
 }
 
 input[type="reset"] {
+    font-size:13px;
+    float:left;
     position: relative;
     display: inline-block;
-    padding: .8em 4em;
+    padding: .5em 3em;
     background:transparent;
     background-color:#85ffd0;
     border-style: none;
     border-radius: 4px;
     color: #fff;
-    font-family:'Lucida Grande','Hiragino Kaku Gothic ProN','Meiryo', sans-serif;
+    font-family: 'Mamelon';
     text-decoration: none;
     text-align: center;
 }
 input[type="reset"]:after {
+    float:left;
     position: absolute;
     top: 3px;
     right: 3px;
@@ -109,19 +140,71 @@ input[type="reset"]:after {
 }
 
 input[type="button"] {
+    font-size:13px;
+    float:left;
     position: relative;
     display: inline-block;
-    padding: .8em 4em;
+    padding: .5em 3em;
     background:transparent;
     background-color:#85ffd0;
     border-style: none;
     border-radius: 4px;
     color: #fff;
-    font-family:'Lucida Grande','Hiragino Kaku Gothic ProN','Meiryo', sans-serif;
+    font-family: 'Mamelon';
     text-decoration: none;
     text-align: center;
 }
 
+/* SelectBox-------------------------------*/
+div { margin: 15px; }
+/* -------------------- Select Box Styles: danielneumann.com Method */
+/* -------------------- Source: http://danielneumann.com/blog/how-to-style-dropdown-with-css-only/ */
+#mainselection1 select {
+    font-family: 'Mamelon';
+    border: 0;
+    color: #EEE;
+    background: transparent;
+    font-size: 13px;
+  
+    padding: 2px 10px;
+    width: 378px;
+    *width: 350px;
+    *background: #85c2ff;
+    -webkit-appearance: none;
+}
+
+#mainselection1 {
+    
+    overflow:hidden;
+    width:350px;
+    -moz-border-radius: 9px 9px 9px 9px;
+    -webkit-border-radius: 9px 9px 9px 9px;
+    border-radius: 9px 9px 9px 9px;
+    background: #85c2ff url("http://i62.tinypic.com/15xvbd5.png") no-repeat scroll 319px center;
+}
+#mainselection2 select {
+    font-family: 'Mamelon';
+    border: 0;
+    color: #EEE;
+    background: transparent;
+    font-size: 13px;
+    
+    padding: 2px 10px;
+    width: 378px;
+    *width: 350px;
+    *background: #85c2ff;
+    -webkit-appearance: none;
+}
+
+#mainselection2 {
+    overflow:hidden;
+    width:350px;
+    -moz-border-radius: 9px 9px 9px 9px;
+    -webkit-border-radius: 9px 9px 9px 9px;
+    border-radius: 9px 9px 9px 9px;
+    
+    background: #85c2ff url("http://i62.tinypic.com/15xvbd5.png") no-repeat scroll 319px center;
+}
 
 
 /* Icons ---------------------------------- */

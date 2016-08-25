@@ -15,13 +15,13 @@ src: url("mamelon/Mamelon.otf");
 }
 
 
-#form-main{
+#cform-main{
     width:100%;
     float:left;
     padding-top:0px;
 }
 
-#form-div {
+#cform-div {
     background-color:rgba(133,194,255,0.4);
     padding-left:35px;
     padding-right:35px;
@@ -44,7 +44,7 @@ src: url("mamelon/Mamelon.otf");
     font-size: 12px;
     border-radius: 0;
     line-height: 15px;
-    background-color: #fbfbfb;
+    background-color: rgba(133,194,255,0.4);
     padding: 13px 13px 13px 54px;
     margin-bottom: 10px;
     width:100%;
@@ -56,12 +56,8 @@ src: url("mamelon/Mamelon.otf");
 }
 
 .feedback-input:focus{
-    background: #fff;
-    box-shadow: 0;
-    border: 3px solid #3498db;
-    color: #3498db;
     outline: none;
-    padding: 13px 13px 13px 54px;
+  
 }
 
 .focused{
@@ -70,11 +66,11 @@ src: url("mamelon/Mamelon.otf");
 }
 .sub{
     position:absolute;
-    color:#ff85a8;
+    color:#fff;
     font-size:20px;
     margin: 0 auto;
     top:2%;
-    left:39%;
+    left:12%;
     font-family: 'Mamelon';
     display: inline-block;
     
@@ -98,10 +94,10 @@ src: url("mamelon/Mamelon.otf");
 }
 input[type="submit"] {
     font-size:13px;
-    float:left;
+    left:24%;
     position: relative;
     display: inline-block;
-    padding: .5em 3em;
+    padding: .5em 8em;
     background:transparent;
     background-color:#85ffd0;
     border-style: none;
@@ -208,30 +204,46 @@ div { margin: 15px; }
 
 
 /* Icons ---------------------------------- */
-#p_name{
+#cp_name{
     background-image: url(icons/adult.svg);
     background-size: 30px 30px;
     background-position: 11px 8px;
     background-repeat: no-repeat;
-    border: 3px solid #ccc;
+    border: 3px solid rgba(133,194,255,0.4);
     border-radius: 3em .7em 2em .7em/.7em 2em .7em 3em;
     
 }
 
-#c_name{
+#cc_name{
     background-image: url(icons/kids.svg);
     background-size: 30px 30px;
     background-position: 11px 8px;
     background-repeat: no-repeat;
-    border: 3px solid #ccc;
+    border: 3px solid rgba(133,194,255,0.4);
     border-radius: 5em .7em 4em .7em/.7em 3em .7em 3em;
 }
-#email{
+#cemail{
     background-image: url(icons/email.svg);
     background-size: 30px 30px;
     background-position: 11px 8px;
     background-repeat: no-repeat;
-    border: 3px solid #ccc;
+    border: 3px solid rgba(133,194,255,0.4);
+    border-radius: 8em .7em 2em .7em/.7em 2em .7em 3em;
+}
+#graduate{
+    background-image: url(icons/graduate.svg);
+    background-size: 30px 30px;
+    background-position: 11px 8px;
+    background-repeat: no-repeat;
+    border: 3px solid rgba(133,194,255,0.4);
+    border-radius: 5em .7em 4em .7em/.7em 3em .7em 3em;
+}
+#deli{
+    background-image: url(icons/express.svg);
+    background-size: 30px 30px;
+    background-position: 11px 8px;
+    background-repeat: no-repeat;
+    border: 3px solid rgba(133,194,255,0.4);
     border-radius: 8em .7em 2em .7em/.7em 2em .7em 3em;
 }
 
@@ -255,7 +267,7 @@ input[type="submit"]:hover, input[type="submit"]:focus {
 
 
 @media only screen and (max-width: 580px) {
-    #form-div{
+    #cform-div{
         left: 3%;
         margin-right: 3%;
         width: 80%;
