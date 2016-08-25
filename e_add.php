@@ -129,9 +129,12 @@ if(isset($_POST["add"])){
 					</tr>
                     <tr>
 						<th>詳細</th>
-						<th><input type="text" name="e_text" id="e_text" size=60
-							value="<?php echo $_SESSION['e_arr'][3];?>" onkeyup="visible();"
-							onchange="visible();" /></th>
+						<th>
+                            <!--input type="text" name="e_text" id="e_text" size=60
+							value="<?php //echo $_SESSION['e_arr'][3];?>" onkeyup="visible();"
+							onchange="visible();" -->
+                            <textarea rows="10" cols="60" name ="e_name" id = "e_name">詳細を入力</textarea>
+                        </th>
 					</tr>
 				</table>
                         <!--form id="my_form"-->
