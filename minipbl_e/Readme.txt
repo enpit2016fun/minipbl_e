@@ -1,15 +1,15 @@
-���݂̖{�v���O������
-mail.php�F���[���쐬���
-mail-2.php�F�m�F���
-mail-3.php�F�������
-��3�ł�
+﻿現在の本プログラムは
+mail.php：メール作成画面
+mail-2.php：確認画面
+mail-3.php：完了画面
+の3つです
 
-���݁Ayahoo.co.jp�̃��[���A�h���X���g�p����
-PHP�ł̃��[�����M���ł���悤�ɂȂ��Ă��܂��B
+現在、yahoo.co.jpのメールアドレスを使用して
+PHPでのメール送信ができるようになっています。
 
-�ݒ��slack��minipbl_e
-�uPHP�Ń��[���𑗐M���邽�߂̐ݒ�F�Q�lURL�v
+設定はslackのminipbl_e
+「PHPでメールを送信するための設定：参考URL」
 http://techmemo.biz/web-cheat-sheet/xampp-local-sendmail/	
-���e�����{���Ă�������
+を各自実施してください
 
-����m�F�ł��Ă���̂́AGoogle Chrome�݂̂ł�
+動作確認できているのは、Google Chromeのみです
