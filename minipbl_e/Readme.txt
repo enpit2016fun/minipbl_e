@@ -1,8 +1,9 @@
 ﻿現在の本プログラムは
 mail.php：メール作成画面
+mailSelect.php : 送信メールアドレス設定画面（別ウインドウ）
 mail-2.php：確認画面
 mail-3.php：完了画面
-の3つです
+の4つです
 
 php.iniはxampp/phpのフォルダ
 sendmailはxampp/sendmailのフォルダにある
@@ -20,5 +21,8 @@ PHPでのメール送信ができるようになっています。
 「PHPでメールを送信するための設定：参考URL」
 http://techmemo.biz/web-cheat-sheet/xampp-local-sendmail/	
 を各自実施してください
+
+mailSelect.phpはデータベースへのアクセスを行うため
+common.phpとconst.phpが必要になります
 
 動作確認できているのは、Google Chromeのみです
