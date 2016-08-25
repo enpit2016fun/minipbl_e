@@ -230,6 +230,7 @@ div { margin: 15px; }
     border: 3px solid rgba(133,194,255,0.4);
     border-radius: 8em .7em 2em .7em/.7em 2em .7em 3em;
 }
+
 #graduate{
     background-image: url(icons/graduate.svg);
     background-size: 30px 30px;
@@ -246,7 +247,24 @@ div { margin: 15px; }
     border: 3px solid rgba(133,194,255,0.4);
     border-radius: 8em .7em 2em .7em/.7em 2em .7em 3em;
 }
+#postalcode{
+    background-image: url(icons/post.png);
+    background-size: 30px 30px;
+    background-position: 11px 8px;
+    background-repeat: no-repeat;
+    border: 3px solid rgba(133,194,255,0.4);
+    border-radius: 8em .7em 2em .7em/.7em 2em .7em 3em;
+}
 
+
+#address{
+    background-image: url(icons/home.svg);
+    background-size: 30px 30px;
+    background-position: 11px 8px;
+    background-repeat: no-repeat;
+    border: 3px solid rgba(133,194,255,0.4);
+    border-radius: 8em .7em 2em .7em/.7em 2em .7em 3em;
+}
 
 textarea {
     width: 100%;

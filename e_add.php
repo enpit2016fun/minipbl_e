@@ -71,6 +71,10 @@ if(isset($_POST["add"])){
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>イベント管理システム-イベント登録-</title>
+<script type="text/javascript" src="./js/jquery.js"></script>
+<script type="text/javascript" src="./js/jquery-ui.js"></script>
+<link rel="STYLESHEET" href="./js/jquery-ui.css" type="text/css">
+
 <link rel="STYLESHEET" href="add.css" type="text/css">
          <script language="javascript">
              
@@ -123,17 +127,16 @@ if(isset($_POST["add"])){
 					</tr>
 					<tr>
 						<th>開催日時</th>
-						<th><input type="text" name="e_date" id="e_date" size=60
-							value="<?php echo $_SESSION['e_arr'][1];?>" onkeyup="visible();"
-							onchange="visible();" /></th>
+						<th>
+                        <input type="text" id="datepicker" name="e_date"></th>
 					</tr>
                     <tr>
 						<th>詳細</th>
 						<th>
                             <!--input type="text" name="e_text" id="e_text" size=60
 							value="<?php //echo $_SESSION['e_arr'][3];?>" onkeyup="visible();"
-							onchange="visible();" -->
-                            <textarea rows="10" cols="60" name ="e_name" id = "e_name">詳細を入力</textarea>
+							onchange="visible();" \-->
+                            <textarea rows="10" cols="60" name ="e_text" id = "e_text">詳細を入力</textarea>
                         </th>
 					</tr>
 				</table>
@@ -154,6 +157,14 @@ if(isset($_POST["add"])){
 	<!-- #main -->
 	</div>
 	<script>
+
+     
+        $(function () {
+    var dateFormat = 'yy-mm-dd';
+    $('#datepicker').datepicker({
+        dateFormat: dateFormat
+    });
+});
 function visible(){
 var e_name = getField("e_name");
 var e_date = getField("e_date");

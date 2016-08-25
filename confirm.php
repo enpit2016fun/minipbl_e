@@ -5,11 +5,14 @@ session_start();
                 $email = $_SESSION['arr'][0];
 				$p_name = $_SESSION['arr'][1];
 				$c_name = $_SESSION['arr'][2];
+    
+                $postalcode = $_SESSION['arr'][5];
+                $address = $_SESSION['arr'][6];
 				$graduation_year = $_SESSION['arr'][3];
 				$issend = $_SESSION['arr'][4];
 		if(isset($_POST["confirm"])){
 			try{
-                 $query = "INSERT INTO `member` (`email`, `p_name`, `c_name`, `graduation_year`, `issend`)" . "VALUES (:email, :p_name, :c_name, :graduation_year, :issend);";
+                 $query = "INSERT INTO `member` (`email`, `p_name`, `c_name`,`graduation_year`, `issend`,`postalcode`,`address`)" . "VALUES (:email, :p_name, :c_name, :graduation_year, :issend, :postalcode, :address);";
                 
                     echo $email;
                     echo $issend_flag;
@@ -17,6 +20,10 @@ session_start();
 					$stmt -> bindParam(':email', $email, PDO::PARAM_STR);
 					$stmt -> bindParam(':p_name', $p_name, PDO::PARAM_STR);
 					$stmt -> bindParam(':c_name', $c_name, PDO::PARAM_STR);
+                
+                    $stmt -> bindParam(':postalcode', $postalcode, PDO::PARAM_STR);
+                    $stmt -> bindParam(':address', $address, PDO::PARAM_STR);
+                
 					$stmt -> bindValue(':graduation_year', $graduation_year, PDO::PARAM_INT);
 					$stmt -> bindValue(':issend', $issend, PDO::PARAM_INT);
 					$stmt -> execute();
@@ -25,6 +32,7 @@ session_start();
 				echo "ERROR:" . $e->getMessage();
 			}
 		}
+    echo $address;
     if($issend == 1)  $issend_flag = "許可";
     else  $issend_flag = "不可";
 ?>
@@ -72,6 +80,23 @@ id="cemail"　size=20
 value="<?php echo $email;?>" onkeyup="visible();"
 onchange="visible();" readonly/>
 </p>
+
+<p class="postalcode">
+<input type="text" name="postalcode" id="postalcode"
+class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" placeholder="お子さんの名前"
+id="postalcode"　size=20
+value="<?php echo $postalcode;?>" onkeyup="visible();"
+onchange="visible();" readonly/>
+</p>
+
+<p class="address">
+<input type="text" name="address" id="address"
+class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" placeholder="メールアドレス"
+id="address"　size=20
+value="<?php echo $address;?>" onkeyup="visible();"
+onchange="visible();" readonly/>
+</p>
+
 
 <p class="graduate">
 <input type="text" name="graduate" id="graduate"

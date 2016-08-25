@@ -79,6 +79,18 @@ src: url("mamelon/Mamelon.otf");
     display: inline-block;
     
 }
+.subsub{
+    position:relative;
+    color:#fff;
+    font-size:27px;
+    margin: 0 auto;
+    top:0%;
+    left:6%;
+    font-family: 'Mamelon';
+    display: inline-block;
+    word-wrap: break-word;
+    
+}
 .title{
     position:absolute;
     background:#f4b3c2;
@@ -111,6 +123,24 @@ input[type="submit"] {
     text-decoration: none;
     text-align: center;
 }
+
+#subsubmit {
+    font-size:13px;
+    top:80%;
+    left:33%;
+    position: absolute;
+    display: inline-block;
+    padding: .5em 3em;
+    background:transparent;
+    background-color:#85ffd0;
+    border-style: none;
+    border-radius: 4px;
+    color: #fff;
+    font-family: 'Mamelon';
+    text-decoration: none;
+    text-align: center;
+}
+
 
 input[type="reset"] {
     font-size:13px;
@@ -228,6 +258,24 @@ div { margin: 15px; }
 }
 #email{
     background-image: url(icons/email.svg);
+    background-size: 30px 30px;
+    background-position: 11px 8px;
+    background-repeat: no-repeat;
+    border: 3px solid #ccc;
+    border-radius: 8em .7em 2em .7em/.7em 2em .7em 3em;
+}
+#postalcode{
+    background-image: url(icons/post.png);
+    background-size: 30px 30px;
+    background-position: 11px 8px;
+    background-repeat: no-repeat;
+    border: 3px solid #ccc;
+    border-radius: 8em .7em 2em .7em/.7em 2em .7em 3em;
+}
+
+
+#address{
+    background-image: url(icons/home.svg);
     background-size: 30px 30px;
     background-position: 11px 8px;
     background-repeat: no-repeat;
