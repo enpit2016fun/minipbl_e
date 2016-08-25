@@ -16,7 +16,7 @@ display: block;
 	width:1000px;
 }
 
-#head{
+/*#head{
 	width:1000px;
 	height:50px;
 	margin-bottom:30px;
@@ -24,11 +24,13 @@ display: block;
 	font-size:17pt;
 	color:#193316;
 	border-bottom: 10px double #009999;
-}
+}*/
 
 #main{
+    background-color:rgba(133,194,255,0.4);
 	margin:0px auto;
 	width:470px;
+    height:800px;
 
 }
 
@@ -39,10 +41,10 @@ h1{
 }
 
 input[type="submit"] {
+  
     width:400px;
     height:100px;
 	position: relative;
-	background-color: #009966;
 	border-radius: 4px;
 	color: #fff;
 	line-height: 52px;

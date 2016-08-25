@@ -12,15 +12,16 @@ if(isset($_POST["new"]) || isset($_POST["change"])) header("Location:add.php");
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 <title>つくしの子保育園名簿登録</title>
+<!--link rel="STYLESHEET" href="./css/add.css" type="text/css"-->
 <link rel="STYLESHEET" href="./css/all.css" type="text/css">
-<link rel="STYLESHEET" href="./css/add.css" type="text/css">
     
 </head>
 <body>
-    <h1>つくしの子保育園名簿登録</h1>
+        
 	<div id=site-box>
 		<div id=main>
-			<form action='Login.php' method='POST'>
+                <form action='Login.php' method='POST'>
+                <h1>つくしの子保育園名簿登録</h1>
 				<input type="submit" name="new" id = "new" value="新しく登録する" style="margin: 10px; float: right;" />
 				<input type="submit" name="change" id="change" value = "登録内容を変更する" style="margin: 10px; float:right;" />
 
