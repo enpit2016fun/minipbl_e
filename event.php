@@ -46,26 +46,23 @@ $pdo = connectPDO();
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>つくしっ子保育園の年間行事</title>
+        <title>イベント一覧表</title>
         <meta name="description" content="An interactive getting started guide for Brackets.">
-        <link rel="stylesheet" href="./css/event.css">
-        <link rel="stylesheet" href="./css/add.css">
+        
+        <link rel="stylesheet" href="main.css">
     </head>
     
     
     <!--ヘッダー-->
     <body>
-    <div id = "site-box"  style = "background: url(./images/flower.png);">
     <header id = "event_top">            
-    <h1>年間行事</h1>
-        <!--img src= "./images/mojimoji.png" width="100" height="100" style= "position:absolute; left:680px; top: 10px;"-->
+    <h1>イベント一覧表</h1>  
     </header>
         
     <!--イベントリスト見出し-->
         <div id = "main">
-            <h2>年間行事一覧</h2>
         <?php        
-            echo "<h4>";
+            echo "<h2>";
             echo "<ul>";
             
             for ($i = count($e_name)-1; $i > -1; $i--){
@@ -78,7 +75,7 @@ $pdo = connectPDO();
             echo "<br>";
             }
             echo "</ul>";
-            echo "</h4>";
+            echo "</h2>";
             ?>
             
             
@@ -86,35 +83,47 @@ $pdo = connectPDO();
         <?php
         for ($i = count($e_name)-1; $i > -1; $i--){
         //イベント名
-        echo "<div class = \"contents\">";
-        echo "<strong><h2 id = \"" .$event_info[4][$i]."\">".$event_info[0][$i]."</h2></strong>";
+        echo "<strong><h3 id = \"" .$event_info[4][$i]."\">".$event_info[0][$i]."</h3></strong>";
             
-        //日時
-        list($year,$month,$date) = split('-',$event_info[1][$i]);
+        //日時    
         echo "<strong>";
-        echo "<p>日時：";
-        echo $year ."年 ".$month."月 ".$date."日";
+        echo "<p>";
+        echo    $event_info[1][$i];
         echo "</p>";
         echo "</strong>";
-            
-        //詳細
-        echo "<p>";
-        echo    $event_info[3][$i];
-        echo "</p>";
-        
-        echo "<a href = '#event_top'>イベントトップへ</a>";
-            
         //画像
         //test用   forest.jpg
         //echo "<img src= \"./images/forest.jpg\" alt=\"森林イメージ\">";
         
         //echo "image_name:" . $event_info[2][$i];
-        echo "<img src= \"".$event_info[2][$i]."\">";
+        echo "<img src= \"".$event_info[2][$i]."\" alt=\"森林イメージ\">";
         //echo "<img src= \"./images/".$event_info[2][$i]."\" alt=\"森林イメージ\">";
         
-        echo "</div>";
+        //詳細
+        echo "<p>";
+        echo    $event_info[3][$i];
+        echo        "<br>";
+        echo        "<br>";
+        echo        "<br>";
+        echo        "<br>";
+        echo        "<br>";
+        echo        "<br>";
+        echo        "<br>";
+        echo        "<br>";
+        echo        "<br>";
+        echo        "<br>";
+        echo        "<br>";
+        echo        "<br>";
+        echo        "<br>";
+        echo        "<br>";
+        echo        "<br>";
+        echo        "<br>";
+        echo        "<br>";    
+        echo "</p>";
+        
+        echo "<a href = '#event_top'>イベントトップへ</a>";
         }
-        echo "</div></div></div>";
+        echo "</div>";
         ?>
     </body>
 </html>

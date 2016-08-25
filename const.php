@@ -1,6 +1,6 @@
 <?php
 define('DBHOST',"localhost");
-define('DBUSER',"ron0hid");
-define('DBPASS',"1234");
+define('DBUSER',"Shuji");
+define('DBPASS',"shuyushin516");
 define('DBNAME',"minipbl_e");
 ?>

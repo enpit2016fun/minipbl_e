@@ -11,13 +11,10 @@ if(isset($_POST["new"]) || isset($_POST["change"])) header("Location:add.php");
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-<title>つくしの子保育園名簿登録</title>
-<link rel="STYLESHEET" href="./css/all.css" type="text/css">
-<link rel="STYLESHEET" href="./css/add.css" type="text/css">
-    
+<title>つくしの子幼稚園名簿登録</title>
+<link rel="STYLESHEET" href="all.css" type="text/css">
 </head>
 <body>
-    <h1>つくしの子保育園名簿登録</h1>
 	<div id=site-box>
 		<div id=main>
 			<form action='Login.php' method='POST'>

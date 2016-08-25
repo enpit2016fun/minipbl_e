@@ -75,7 +75,7 @@ if(isset($_POST["add"])){
 <script type="text/javascript" src="./js/jquery-ui.js"></script>
 <link rel="STYLESHEET" href="./js/jquery-ui.css" type="text/css">
 
-<link rel="STYLESHEET" href="./css/add.css" type="text/css">
+<link rel="STYLESHEET" href="add.css" type="text/css">
          <script language="javascript">
              
              $(function() {          

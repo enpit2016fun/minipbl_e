@@ -32,7 +32,7 @@ session_start();
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>イベント管理システム-確認-</title>
-<link rel="STYLESHEET" href="./css/add.css" type="text/css">
+<link rel="STYLESHEET" href="list.css" type="text/css">
 </head>
 <body>
 	<div id=site-box>
