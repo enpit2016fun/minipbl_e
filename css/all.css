@@ -3,6 +3,7 @@ body{
 margin:0 auto;
 padding:0;
 font-size:small;
+font-family: メイリオ,sans-serif;
 background:#fff;
 }
 
@@ -22,7 +23,7 @@ display: block;
 	padding:30px;
 	font-size:17pt;
 	color:#193316;
-	border-bottom: 10px double #71e062;
+	border-bottom: 10px double #009999;
 }
 
 #main{
@@ -31,8 +32,15 @@ display: block;
 
 }
 
+h1{
+ font-size:36px;
+ color:#505050;
+ text-align:center;
+}
 
 input[type="submit"] {
+    width:400px;
+    height:100px;
 	position: relative;
 	background-color: #009966;
 	border-radius: 4px;
@@ -40,14 +48,15 @@ input[type="submit"] {
 	line-height: 52px;
 	-webkit-transition: none;
 	transition: none;
-	box-shadow: 0 3px 0 #669966;
+	box-shadow: 0 3px 0 #009999;
     font-size:18pt;
 	text-shadow: 0 1px 1px rgba(0, 0, 0, .4);
 }
+/*
 input[type="submit"]:hover {
 	top: -4px;
-	box-shadow: 0 7px 0 #669966;
-}
+	box-shadow: 0 7px 0 #009999;
+}*/
 input[type="submit"]:active {
 	top: 3px;
 	box-shadow: none;

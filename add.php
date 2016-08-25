@@ -15,7 +15,9 @@ if(isset($_POST["add"])){
                 $email = htmlspecialchars($_POST['email']);
 				$graduation_year = $_POST['graduation_year'];
 				$issend = $_POST['issend'];
-				$infoarr = array($email,$p_name,$c_name,$graduation_year,$issend);
+                $zip11 = htmlspecialchars($_POST['zip11']);
+				$addr11 = htmlspecialchars($_POST['addr11']);
+				$infoarr = array($email,$p_name,$c_name,$graduation_year,$issend,$zipll,$addrll);
 				$_SESSION['arr'] = $infoarr;
 				$pdo = null;
 				//ユーザID、パスワードが入力されていなかったらエラーメッセージを表示
@@ -48,7 +50,6 @@ if(isset($_POST["add"])){
 <div id="form-main">
 <div id="form-div">
 <form action='add.php' method='POST' class="form" id="form1">
-<!--form class="form" id="form1"-->
 <p class="p_name">
 <input type="text" name="p_name" id="p_name"
 class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" placeholder="親御さんのお名前"
@@ -71,7 +72,14 @@ id="email"　size=20
 value="<?php echo $_SESSION['arr'][3];?>" onkeyup="visible();"
 onchange="visible();" />
 </p>
-						<th align="left">
+    
+<input type="text" name="zip11" id="zip11" size="10" maxlength="8" value="<?php echo $_SESSION['arr'][5];?>" onKeyUp="AjaxZip3.zip2addr(this,'','addr11','addr11'); "onchange="visible();" >
+
+住所
+						<input type="text" name="addr11" id="addr11" size=60
+							value="<?php echo $_SESSION['arr'][6];?>" onkeyup="visible();"
+							onchange="visible();" />
+
 
                         <select name = "graduation_year"  onchange = "visibleByselect();">
                         <option value = "" selected>卒業年度</option>
@@ -86,17 +94,15 @@ onchange="visible();" />
                         <option value = "2008">2008年度</option>
                         <option value = "2007">2007年度</option>
                         </select>
-						</th>
-					</tr>
 
-                        <th align="left">
+
+
                         <select name = "issend"  onchange = "visibleByselect();">
                         <option value = "" selected>配信希望</option>
                         <option value = "1">許可</option>
                         <option value = "0">不可</option>
 
                     </select>
-                    </th>
 <font face="Hiragino Maru Gothic ProN">
 </font>
 <div id = "foot">
@@ -104,8 +110,6 @@ onchange="visible();" />
 <input type="reset" value ="リセット" style=" margin: 10px;" />
 <input type="button" value="戻る" onclick="tolistback()" style=" margin: 10px;">
 </div>
-
-</form>
 </form>
 
 </div>
