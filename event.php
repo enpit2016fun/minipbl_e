@@ -49,7 +49,7 @@ $pdo = connectPDO();
         <title>つくしっ子保育園の年間行事</title>
         <meta name="description" content="An interactive getting started guide for Brackets.">
         <link rel="stylesheet" href="./css/event.css">
-        <link rel="stylesheet" href="./css/add.css">
+        <!--link rel="stylesheet" href="./css/add.css"-->
     </head>
     
     
@@ -105,12 +105,7 @@ $pdo = connectPDO();
         echo "<a href = '#event_top'>イベントトップへ</a>";
             
         //画像
-        //test用   forest.jpg
-        //echo "<img src= \"./images/forest.jpg\" alt=\"森林イメージ\">";
-        
-        //echo "image_name:" . $event_info[2][$i];
         echo "<img src= \"".$event_info[2][$i]."\">";
-        //echo "<img src= \"./images/".$event_info[2][$i]."\" alt=\"森林イメージ\">";
         
         echo "</div>";
         }

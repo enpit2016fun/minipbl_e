@@ -15,7 +15,14 @@ if(isset($_POST["add"])){
                 $email = htmlspecialchars($_POST['email']);
 				$graduation_year = $_POST['graduation_year'];
 				$issend = $_POST['issend'];
-				$infoarr = array($email,$p_name,$c_name,$graduation_year,$issend);
+                
+                $postalcode = htmlspecialchars($_POST['postalcode']);
+                $address = htmlspecialchars($_POST['address']);
+                
+                $infoarr = array($email,$p_name,$c_name,$graduation_year,$issend,$postalcode,$address);
+                
+                
+                
 				$_SESSION['arr'] = $infoarr;
 				$pdo = null;
 				//ユーザID、パスワードが入力されていなかったらエラーメッセージを表示
@@ -23,11 +30,11 @@ if(isset($_POST["add"])){
 				echo "未入力の項目があります。";
 			}                                     
     }else{
-              $_SESSION['arr'] = array("","","","","");
+              $_SESSION['arr'] = array("","","","","","","");
 	}
     header("Location:confirm.php");
 }else{
-     $_SESSION['arr'] = array("","","","","");
+     $_SESSION['arr'] = array("","","","","","","");
 }                                                                      
 ?>
 
@@ -35,8 +42,10 @@ if(isset($_POST["add"])){
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="js/jquery.jpostal.js"></script>
 <title>イベント管理システム-新規登録-</title>
-<link rel="STYLESHEET" href="./css/add.css" type="text/css">
+<link rel="STYLESHEET" href="add.css" type="text/css">
 </head>
 <body>
 <form action='add.php' method='POST'>
@@ -59,7 +68,7 @@ if(isset($_POST["add"])){
 <input type="text" name="p_name" id="p_name"
 class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" placeholder="親御さんのお名前"
 id="p_name"　size=20
-value="<?php echo $_SESSION['arr'][2];?>" onkeyup="visible();"
+value="<?php echo $_SESSION['arr'][0];?>" onkeyup="visible();"
 onchange="visible();" />
 </p>
 
@@ -67,16 +76,30 @@ onchange="visible();" />
 <input type="text" name="c_name" id="c_name"
 class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" placeholder="お子さんの名前"
 id="c_name"　size=20
-value="<?php echo $_SESSION['arr'][3];?>" onkeyup="visible();"
+value="<?php echo $_SESSION['arr'][0];?>" onkeyup="visible();"
 onchange="visible();" />
 </p>
+
 <p class="email">
 <input type="text" name="email" id="email"
 class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" placeholder="メールアドレス"
 id="email"　size=20
-value="<?php echo $_SESSION['arr'][1];?>" onkeyup="visible();"
+value="<?php echo $_SESSION['arr'][0];?>" onkeyup="visible();"
 onchange="visible();" />
 </p>
+
+<p class="postalcode">
+<input type="text" name="postalcode" id="postalcode"
+class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" placeholder="郵便番号"
+id="postalcode"　size=8
+value="<?php echo $_SESSION['arr'][0];?>" onkeyup="visible; " onchange="visible();" />
+</p>
+
+<p class="address">
+<input type="text" name="address" id="address"
+class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" placeholder="ご住所" id="address"　size=20 onkeyup="visible();" value="<?php echo $_SESSION['arr'][0];?>"                     onchange="visible();" />
+</p>
+
 <div class="style-select slate">
 						<th align="left">
                         <div id="mainselection1">
@@ -155,6 +178,12 @@ function getField(fieldName){
 function tolistback(){
 		location.href = "Login.php";
 }
+$(window).ready( function() {
+                $("#postalcode").jpostal({
+                                         postcode: ["#postalcode"],
+                                         address: {"#address": "%3%4%5"}
+                                         });
+                });
 </script>
 </body>
 </html>

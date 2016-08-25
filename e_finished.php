@@ -14,7 +14,7 @@
 <div class="subsub">
 
 <h2 align="center">登録が完了しました!</h2>
-<h2 align="center">〇〇保育園からの<br>イベント情報を<br>お楽しみに!</h2>
+
 </div>
 
 <input type="submit" name="backlist" id="subsubmit" value="イベント一覧へ" />

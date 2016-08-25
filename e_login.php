@@ -11,20 +11,16 @@ if(isset($_POST["new"]) || isset($_POST["change"])) header("Location:e_add.php")
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-<title>つくしっ子保育園イベント管理システム</title>
-<link rel="STYLESHEET" href="./css/all.css" type="text/css">
-<link rel="STYLESHEET" href="./css/add.css" type="text/css">
+<title>つくしの子幼稚園名簿登録</title>
+    <link rel="STYLESHEET" href="add.css" type="text/css">
+    <link rel="STYLESHEET" href="./css/all.css" type="text/css">
 </head>
 <body>
 	<div id=site-box>
 		<div id=main>
-            <h1>つくしっ子保育園</h1>
-            <h1>イベント管理システム</h1>
-            
+            <h1>イベント登録</h1>
 			<form action='e_login.php' method='POST'>
 				<input type="submit" name="new" id = "new" value="イベントを登録する" style="margin: 10px; float: right;" />
-            </form>
-            <form action='mail.php' method='POST'>
 				<input type="submit" name="change" id="change" value = "メールを送信する" style="margin: 10px; float:right;" />
 
 			</form>
