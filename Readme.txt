@@ -19,6 +19,10 @@ common.php：なんかいろいろ
 
 const.php：データベースへのログイン情報（自分のアカウントに書き直して使ってね）
 
+minipbl_e.sql：使用するデータベース（自分の環境にインポートする）
+メンバーのテーブルのみでイベントのテーブルは作ってない
+
+
 ----つかってない------------
 edit.php:編集画面
 logout.php:ログアウト画面
@@ -44,6 +48,3 @@ http://techmemo.biz/web-cheat-sheet/xampp-local-sendmail/
 
 動作確認できているのは、Google Chromeのみです
 
-
-minipbl_e.sql：使用するデータベース（自分の環境にインポートする）
-メンバーのテーブルのみでイベントのテーブルは作ってない
