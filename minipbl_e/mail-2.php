@@ -25,7 +25,7 @@
 			<?php echo "この内容でよろしいですか？"?>
 			<p>
 			<input type="submit" value="送信"> <input type="button" value="戻る"
-				onclick="history.back()">
+				onclick="history.go(-1)">
 		</p>
 	</form>
 
