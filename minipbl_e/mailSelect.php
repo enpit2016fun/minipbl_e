@@ -35,9 +35,9 @@ window.opener.document.js.address.value=adstring;
 </script>
 <body>
 
-	<form name="chtable" method="GET0">
+	<form name="chtable" method="GET0" style="position:absolute; width: 100%;text-align:center;">
 
-		<table border="1" cellspacing="0">
+		<table border="1" cellspacing="0" style="width:100%;text-align:center;">
 <?php
 $pdo = connectPDO ();
 
@@ -119,11 +119,12 @@ for($i = 0; $i <= count ( $event_info ) + 1; $i ++) {
 // window.opener.document.FORMA.RESULT.value=value
 ?>
 
-		</table>
 
+		</table>
 		<input type="button" name="setup" value="設定"
 			onclick="javascript:window.open('about:blank','_self').close();">
-		</p>
+		
+		
 	</form>
 
 </body>

@@ -11,7 +11,7 @@
 
 <body>
 	<form name="js" action="mail-3.php" method="GET"
-		style="position: absolute; text-align: center; width: 800px;">
+		style="position: absolute; text-align: center; width: 100%;">
 		<p>送信アドレス</p>
 		<input type="text" name="address"
 			value="<?php echo $_GET['address']; ?>" readonly />

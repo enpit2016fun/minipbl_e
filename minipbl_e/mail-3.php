@@ -11,7 +11,7 @@
 <body>
 
 	<form name="js"
-		style="position: absolute; text-align: center; width: 800px; top: 10%">
+		style="position: absolute; text-align: center; width: 100%; top: 10%;">
 		<?php
 $mailto = $_GET ['address'];
 $subject = $_GET ['title'];
