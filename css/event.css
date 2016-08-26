@@ -24,8 +24,8 @@ header{
     font-size:28px;
     text-align:center;
     width:800px;
-    background-color: midnightblue;
-    color:#ffffff;
+    background-color:#FFF;
+    color:#505050;
 }
 
 #main{
@@ -59,11 +59,7 @@ ul{
     font-size:24px;
 }
 div{
-    /*color: cornflowerblue;*/
     width: 800px;
-    /*margin-top: 20px;
-    /*margin-right: auto;
-    margin-left: auto;*/
 }
 
 .contents{
@@ -76,38 +72,23 @@ p{
     
 }
 
-span{/*
-    width:100%;
-    margin-left:100px;
-    */
-}
-
-img{
-   /*float: left;*/
-   /* margin-left: 100px;*/
-}
 
 a{
-
     font-weight: bold;
-    /*color:coral;*/
-    /*text-decoration:underline;*/
 }
 
-/*a:link{
-    color:cornflowerblue;
+a:link{
+    color:#505050;
     text-decoration: none;
     font-style: normal;
-}*/
+}
 
 a:visited{
-    color:midnightblue;
-    /*text-decoration:overline;*/
+    color:#505050;
     font-style: normal;
 }
 
-a:hover{
-    /*color:blueviolet;*/
+a:link:hover{
     text-decoration: underline;
     font-style: italic;
 }

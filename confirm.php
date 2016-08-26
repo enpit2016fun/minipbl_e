@@ -101,7 +101,7 @@ onchange="visible();" readonly/>
 <input type="text" name="graduate" id="graduate"
 class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" placeholder="お子さんの名前"
 id="graduate"　size=20
-value="<?php echo $graduation_year;?>" onkeyup="visible();"
+value="<?php echo $graduation_year."年度";?>" onkeyup="visible();"
 onchange="visible();" readonly/>
 </p>
 

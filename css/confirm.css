@@ -99,7 +99,7 @@ input[type="submit"] {
     display: inline-block;
     padding: .5em 8em;
     background:transparent;
-    background-color:#85ffd0;
+    background-color:#85c2ff;
     border-style: none;
     border-radius: 4px;
     color: #fff;
@@ -115,7 +115,7 @@ input[type="reset"] {
     display: inline-block;
     padding: .5em 3em;
     background:transparent;
-    background-color:#85ffd0;
+    background-color:#85c2ff;
     border-style: none;
     border-radius: 4px;
     color: #fff;
@@ -142,7 +142,7 @@ input[type="button"] {
     display: inline-block;
     padding: .5em 3em;
     background:transparent;
-    background-color:#85ffd0;
+    background-color:#85c2ff;
     border-style: none;
     border-radius: 4px;
     color: #fff;
@@ -304,7 +304,7 @@ textarea {
 input[type="button"]:hover, input[type="button"]:focus,
 input[type="reset"]:hover, input[type="reset"]:focus,
 input[type="submit"]:hover, input[type="submit"]:focus {
-    background-color:#85c2ff;
+    background-color:#6a9bcc;
 }
 
 

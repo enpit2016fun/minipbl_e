@@ -32,6 +32,8 @@ h4 {
 .tgl {
   display: none;
 }
+
+
 .tgl, .tgl:after, .tgl:before, .tgl *, .tgl *:after, .tgl *:before, .tgl + .tgl-btn {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;

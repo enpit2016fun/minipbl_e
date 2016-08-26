@@ -5,7 +5,6 @@ session_start();
 
 //追加ボタンが押されていれば
 if(isset($_POST["add"])){
-    echo "add";
         
     //初期化直後ならば
     if(!empty($_SESSION["USERID"])){
@@ -28,19 +27,13 @@ if(isset($_POST["add"])){
           } else {
               $e_img = 'null';
           }
-                echo "lets enjoy";
+
                 try{
-                $pdo = connectPDO();
-            //$result = mysql_query("select count(*) from mytable", $link);
-            // $row = mysql_fetch_array($result, MYSQL_ASSOC);
-               // $stmt = $pdo->query("SELECT COUNT(*) FROM event");
-		        //$row = $stmt->fetch(PDO::FETCH_ASSOC);
-                //$dbh->setAttribute(PDO::MYSQL_ATTR_USE_BUFFERED_QUERY, true); 
+                $pdo = connectPDO(); 
                 $sql = 'SELECT * FROM event ';
                 $stmt = $pdo->query($sql);
                 $stmt->execute();
                 $count=$stmt->rowCount();
-			echo "count:" . $count;
 			}catch(PDOException $e){
 				echo "ERROR:" . $e->getMessage();
 			}
@@ -131,7 +124,7 @@ if(isset($_POST["add"])){
                <input type="text" name="e_name" id="e_name"
                class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" placeholder="イベント名"
                id="e_name"　size=20
-               value="<?php echo $_SESSION['arr'][0];?>" onkeyup="visible();"
+               value="<?php echo $_SESSION['e_arr'][0];?>" onkeyup="visible();"
                onchange="visible();" />
                </p>
                
@@ -148,14 +141,12 @@ if(isset($_POST["add"])){
                class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" placeholder="詳細"
                id="e_text"　size=20
                
-               value="<?php echo $_SESSION['arr'][3];?>" onkeyup="visible();"
+               value="<?php echo $_SESSION['e_arr'][3];?>" onkeyup="visible();"
                onchange="visible();" />
                </p>
 
-                        <!--form id="my_form"-->
     <input type="file" name="upfile" size="30" />
-    <!--input type="submit" value="Upload" />
-</form--> 
+
 				<div id = "foot">
                     <!--入力なしだったら押せなくする機能どっかにいったかなしい-->
 					<input type="submit" name="add" id="add" value="追加する" style=" margin: 8px;"/>
