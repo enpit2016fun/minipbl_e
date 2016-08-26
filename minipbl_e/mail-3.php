@@ -9,7 +9,10 @@
 
 </head>
 <body>
-<?php
+
+	<form name="js"
+		style="position: absolute; text-align: center; width: 800px; top: 10%">
+		<?php
 $mailto = $_GET ['address'];
 $subject = $_GET ['title'];
 $content = $_GET ['honbun'];
@@ -25,8 +28,6 @@ if (mb_send_mail ( $mailto, $subject, $content, $mailfrom )) {
 	echo "送信できませんでした";
 }
 ?>
-	<form name="js"
-		style="position: absolute; text-align: center; width: 800px; top: 10%">
 		<p name="kanryo"></p>
 		<p>送信アドレス</p>
 		<input type="text" name="address"
